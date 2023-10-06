@@ -9,18 +9,18 @@
 ### Installing
 - Clone the repo and cd into the directory
 - Use npm to install dependencies
-```bash npm install```
+```npm install```
 ### Running the app
 - Make sure to build the project first
-```bash npm run build```
+```npm run build```
 - Use npm to run the app
-```bash npm start```
+```npm start```
 ### Running the tests
 - Use npm to run the tests
-```bash npm run test```
+```npm run test```
 ### Running your own input
 - The API is hosted on localhost:8000
-- Use postman or any other API testing tool to send yours request to http://localhost:8000
+- Use Postman or any other API testing tool to send your request to http://localhost:8000
 
 ## API Documentation
 ### POST /add

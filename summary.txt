@@ -8,16 +8,16 @@
         The addPoints function has a time complexity of O(log(n)) because it uses a binary search to find the correct index to 
             insert the new transaction into the transactions stack.
 
-            I was orginally thinking about sorting an array of transactions every time a new transaction was added,
+            I was originally thinking about sorting an array of transactions every time a new transaction was added,
             but this would have been O(nlog(n)).
             
-        The spendPoints function has a time complexity of O(n) because there is a possibility of spending every transactions points.
+        The spendPoints function has a time complexity of O(n) because there is a possibility of spending every transaction point.
             but updating the transactions stack is O(1) because it is just popping the transaction off the stack.
 
-            orginally I was thinking about using a sorted array and not a sorted stack stack to store the transactions.
+            Originally I was thinking about using a sorted array and not a sorted stack stack to store the transactions.
             But removing from the end of an array is O(1) and removing from the beginning of an array is O(n).
         
-        The remaining functions have a time complexity of O(1) because they are just return data
+        The remaining functions have a time complexity of O(1) because they just return data
 
         The overall space complexity is O(n) because the transactions stack is the largest data structure that is being used.
     
@@ -25,7 +25,7 @@
         The transactions stack is not encrypted and is not protected from being accessed by other users.
         The transactions stack is also not protected from being modified and deleted by other users.
 
-        The data is stored in the client. In a real world application the data would be stored in a database.
+        The data is stored in the client. In a real-world application, the data would be stored in a database.
         The data would also be encrypted and protected from being accessed by other users.
         The data would also be protected from being modified and deleted by other users.
 
