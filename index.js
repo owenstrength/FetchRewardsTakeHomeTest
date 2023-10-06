@@ -14,7 +14,6 @@ var userTransactions = []; // stack of transactions sorted by timestamp
 
 // Add transaction to userTransactions and update userBalance
 // Time complexity: O(log n)
-
 function addPoints(req, res) {
     // validate request body
     if (!req.body.payer || !req.body.points || !req.body.timestamp) {
@@ -119,14 +118,30 @@ function spendPoints(req, res) {
     res.json(spendTransactions);
 }
 
-// routes
+// reset user balance and transactions O(1)
+function reset(req, res) {
+    var reset = req.body.reset;
+    if (reset) {
+        userTotalPoints = 0;
+        userBalance = {};
+        userTransactions = [];
+        res.sendStatus(200);
+    } else {
+        res.status(400).send('Invalid request body');
+    }
+}
 
+// routes
 app.post('/add', (req, res) => {
     addPoints(req, res);
 });
 
 app.post('/spend', (req, res) => {
     spendPoints(req, res);
+});
+
+app.post('/reset', (req, res) => {
+    reset(req, res);
 });
 
 app.get('/balance', (req, res) => {

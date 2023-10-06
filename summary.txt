@@ -4,25 +4,41 @@
     I used Express because it is a very popular framework for Node.js and it is very easy to use.
     
 2. What are the advantages and disadvantages of your solution?
-    The main advantage of my solution is that is very efficient and scalable.
+    The main advantage of my solution is that is very efficient.
         The addPoints function has a time complexity of O(log(n)) because it uses a binary search to find the correct index to 
             insert the new transaction into the transactions stack.
+
+            I was orginally thinking about sorting an array of transactions every time a new transaction was added,
+            but this would have been O(nlog(n)).
             
         The spendPoints function has a time complexity of O(n) because there is a possibility of spending every transactions points.
             but updating the transactions stack is O(1) because it is just popping the transaction off the stack.
+
+            orginally I was thinking about using a sorted array and not a sorted stack stack to store the transactions.
+            But removing from the end of an array is O(1) and removing from the beginning of an array is O(n).
         
-        The rest of the functions have a time complexity of O(1) because they are just returning data
+        The remaining functions have a time complexity of O(1) because they are just return data
 
         The overall space complexity is O(n) because the transactions stack is the largest data structure that is being used.
     
     The main disadvantage of my solution is that it is not very secure.
         The transactions stack is not encrypted and is not protected from being accessed by other users.
-        The transactions stack is also not protected from being modified by other users.
-        The transactions stack is also not protected from being deleted by other users.
+        The transactions stack is also not protected from being modified and deleted by other users.
 
-        I decided to not implement any security features because I wanted to focus on the functionality of the API.
+        The data is stored in the client. In a real world application the data would be stored in a database.
+        The data would also be encrypted and protected from being accessed by other users.
+        The data would also be protected from being modified and deleted by other users.
 
+        If I were to include a database, the program would be would have this layout.
+            API layer -> Service Layer -> Data Access Layer -> Database
 
+        The API layer would be responsible for handling the HTTP requests and responses.
+        The Service layer would be responsible for handling the logic.
+        The Data Access Layer would be responsible for accessing the database.
+        The Database would be responsible for storing the data.
+
+        I decided to not implement any of these features because I wanted to focus on the functionality of the API.
+        
 
 3. What has been a favorite school/personal project thus far? What about it that challenged you
 
@@ -31,4 +47,3 @@
     Specifically I learned about min heaps and binary trees. I also learned about how to implement a priority queue using a min heap.
 
     I knew very little about these topics before I started this project and I was able to learn a lot about them while working on this project.
-    
