@@ -1,0 +1,34 @@
+1. Why did you choose the tools, libraries, and language you used for the coding exercise?
+    I used Node.js and Express with Javascript because it is a very simple and easy way to build an API as a developer. 
+    I Used Javascript because it is a high level language and it is easy to read and understand.
+    I used Express because it is a very popular framework for Node.js and it is very easy to use.
+    
+2. What are the advantages and disadvantages of your solution?
+    The main advantage of my solution is that is very efficient and scalable.
+        The addPoints function has a time complexity of O(log(n)) because it uses a binary search to find the correct index to 
+            insert the new transaction into the transactions stack.
+            
+        The spendPoints function has a time complexity of O(n) because there is a possibility of spending every transactions points.
+            but updating the transactions stack is O(1) because it is just popping the transaction off the stack.
+        
+        The rest of the functions have a time complexity of O(1) because they are just returning data
+
+        The overall space complexity is O(n) because the transactions stack is the largest data structure that is being used.
+    
+    The main disadvantage of my solution is that it is not very secure.
+        The transactions stack is not encrypted and is not protected from being accessed by other users.
+        The transactions stack is also not protected from being modified by other users.
+        The transactions stack is also not protected from being deleted by other users.
+
+        I decided to not implement any security features because I wanted to focus on the functionality of the API.
+
+
+
+3. What has been a favorite school/personal project thus far? What about it that challenged you
+
+    My Favorite project I've worked on is my file compression app. I implemented a Huffman Coding algorithm to compress files.
+    I enjoyed working on this project because it was very challenging and I learned a lot about data structures and algorithms.
+    Specifically I learned about min heaps and binary trees. I also learned about how to implement a priority queue using a min heap.
+
+    I knew very little about these topics before I started this project and I was able to learn a lot about them while working on this project.
+    
